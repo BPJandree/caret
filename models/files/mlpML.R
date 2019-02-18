@@ -5,7 +5,7 @@ modelInfo <- list(label = "Multi-Layer Perceptron, with multiple layers",
                   parameters = data.frame(parameter = c('layer1','layer2','layer3'),
                                           class = c('numeric','numeric','numeric'),
                                           label = c('#Hidden Units layer1','#Hidden Units layer2','#Hidden Units layer3')),
-                  grid = function(x, y, len = NULL, search = "grid") {
+                  grid = function(x, y, len = NULL, search = "multipleLayers") {
                     if(search == "grid") {
                       out <- data.frame(layer1 = ((1:len) * 2) - 1, layer2 = 0, layer3 = 0)
                     } else {
